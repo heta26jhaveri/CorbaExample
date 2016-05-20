@@ -1,0 +1,15 @@
+**********************************************************************
+Creating CORBAServer File:
+**********************************************************************
+
+1.	Get an ORB object by calling init() method.
+2.	Bind the orb object with the implementation file.
+3.	Get the reference object of “RootPOA”.
+4.	Bind the object with the POA by calling narrow() method and activate it.
+5.	Get the reference object of “NameService”.
+6.	Bind the object with NamingContextExt by calling narrow() method.
+7.	Get the reference object of implementation object by calling servant_to_reference on poa.
+8.	Bind the object with the interface by calling narrow() method.
+9.	Set the stringified name to be bound with the object using to_name() method on namingcontextobj;
+10.	Bind the stringified object with the interface object by calling rebind() method.
+11.	call the orb.run() method.
